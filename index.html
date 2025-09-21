@@ -46,7 +46,7 @@
     h2{font-size:clamp(24px,4vw,36px)}
     h3{font-size:clamp(18px,3vw,22px)}
     p{color:var(--muted)}
-    section{padding:86px 0}
+    section{padding:80px 0}
 
     .nav{position:sticky;top:0;z-index:50;background:rgba(12,16,36,.6);backdrop-filter:blur(12px);border-bottom:1px solid var(--border)}
     .nav .bar{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
@@ -66,6 +66,7 @@
     .photo{padding:18px}
     .photo img{max-width:70%;margin:auto;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,.35)}
 
+    #info{margin-top:40px} /* se baja solo esta seccion */
     #info .cards{grid-template-columns:repeat(3,1fr)}
     .card{overflow:hidden;transition:transform .18s ease, box-shadow .18s ease}
     .card:hover{transform:translateY(-4px);box-shadow:0 30px 60px rgba(0,0,0,.4)}
@@ -87,8 +88,9 @@
     .social a:hover{box-shadow:var(--ring)}
 
     form{display:grid;gap:12px}
-    input,textarea{background:#0d1330;border:1px solid var(--border);color:var(--text);padding:12px;border-radius:12px;outline:none}
+    input,textarea{background:#0d1330;border:1px solid var(--border);color:#eaf2ff;padding:12px;border-radius:12px;outline:none}
     textarea{min-height:120px;resize:vertical}
+
     .msg{display:none;margin-top:8px;padding:10px;border-radius:10px}
     .ok{display:none;background:rgba(34,197,94,.12);border:1px solid rgba(34,197,94,.35);color:#bbf7d0}
     .err{display:none;background:rgba(239,68,68,.12);border:1px solid rgba(239,68,68,.35);color:#fecaca}
@@ -129,8 +131,9 @@
         <p class="lead">Soy estudiante de la Tecnicatura Universitaria en Programacion (UTN). Me apasiona el desarrollo en C++ y web, con un enfoque especial en la creacion de videojuegos. Disfruto transformar ideas en proyectos concretos, buscando siempre que el codigo sea claro, simple y entretenido de usar.</p>
         <div class="tags">
           <span class="tag">C++</span>
+          <span class="tag">C#</span>
           <span class="tag">Videojuegos</span>
-          <span class="tag">HTML/CSS/JS</span>
+          <span class="tag">HTML</span>
           <span class="tag">SQL</span>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
@@ -160,88 +163,8 @@
         </div></article>
         <article class="card panel"><div class="box">
           <h3>Stack</h3>
-          <p>C++, STL, SFML, HTML, CSS, JS, Git, SQL.</p>
+          <p>C++, C#, SFML, HTML, Git, SQL.</p>
         </div></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONOCIMIENTOS -->
-  <section id="conocimientos">
-    <div class="wrap">
-      <div class="section-title"><span class="pill"></span><h2>Conocimientos</h2></div>
-      <div class="skills-grid">
-        <div class="skill-card">
-          <h3>🎮 C++</h3>
-          <p>Nivel avanzado. Base principal de mis proyectos, especialmente videojuegos.</p>
-        </div>
-        <div class="skill-card">
-          <h3>🧩 POO</h3>
-          <p>Experiencia aplicando principios de programacion orientada a objetos.</p>
-        </div>
-        <div class="skill-card">
-          <h3>🖼 SFML</h3>
-          <p>Manejo intermedio de la libreria grafica para videojuegos 2D.</p>
-        </div>
-        <div class="skill-card">
-          <h3>🗄 SQL</h3>
-          <p>Conocimientos de bases de datos relacionales y consultas basicas.</p>
-        </div>
-        <div class="skill-card">
-          <h3>🔧 Git</h3>
-          <p>Uso cotidiano para control de versiones y trabajo colaborativo en GitHub.</p>
-        </div>
-        <div class="skill-card">
-          <h3>🌐 HTML/CSS/JS</h3>
-          <p>Capacidad para maquetado web y proyectos frontend basicos.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- PROYECTOS -->
-  <section id="proyectos">
-    <div class="wrap">
-      <div class="section-title"><span class="pill"></span><h2>Proyectos</h2></div>
-      <div class="grid cards">
-        <article class="card panel">
-          <img src="trucazo.jpg" alt="Proyecto Trucazo" />
-          <div class="box">
-            <h3>Trucazo</h3>
-            <p>Juego estilo Roguelike basado en el truco donde se hacen jugadas para sumar puntos y pasar de rondas.</p>
-            <div class="links">
-              <a class="btn" href="https://github.com/BernardoFiaschi/TRUCAZO" target="_blank">Ver repo</a>
-              <span class="chip">C++</span>
-              <span class="chip">SFML</span>
-            </div>
-          </div>
-        </article>
-        <article class="card panel">
-          <img src="greed.jpg" alt="Proyecto Greed" />
-          <div class="box">
-            <h3>Greed TP Integrador</h3>
-            <p>Juego de dados en donde se deben acumular puntos y elegir sabiamente cuando detenerse para no perderlos. Se puede jugar solo contra la CPU o de a dos jugadores o mas.</p>
-            <div class="links">
-              <a class="btn" href="https://github.com/manuimfeld/TP_INTEGRADOR" target="_blank">Ver repo</a>
-              <span class="chip">C++</span>
-              <span class="chip">POO</span>
-            </div>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- REDES -->
-  <section id="redes">
-    <div class="wrap">
-      <div class="section-title"><span class="pill"></span><h2>Redes</h2></div>
-      <div class="panel" style="padding:20px">
-        <div class="social">
-          <a href="https://github.com/BernardoFiaschi" target="_blank">GitHub</a>
-          <a href="https://www.linkedin.com/in/bernardo-fiaschi/" target="_blank">LinkedIn</a>
-          <a href="mailto:bernardo.fiaschi@gmail.com">Email</a>
-        </div>
       </div>
     </div>
   </section>
@@ -252,7 +175,22 @@
       <div class="section-title"><span class="pill"></span><h2>Contacto</h2></div>
       <p>Escribime:</p>
       <div class="panel" style="padding:20px">
-        <form id="form-contacto" action="https://formspree.io/f/tu-endpoint" method="POST">
+        <form action="https://formspree.io/f/mzzbepvp" method="POST">
           <input type="text" name="nombre" placeholder="Tu nombre" required />
           <input type="email" name="email" placeholder="Tu email" required />
           <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Hecho a mano por Bernardo Fiaschi · © <span id="year"></span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
