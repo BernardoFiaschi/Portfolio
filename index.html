@@ -66,12 +66,12 @@
     .photo{padding:18px}
     .photo img{max-width:70%;margin:auto;border-radius:16px;box-shadow:0 15px 35px rgba(0,0,0,.35)}
 
+    #info{margin-top:40px}
     #info .cards{grid-template-columns:repeat(3,1fr)}
     .card{overflow:hidden;transition:transform .18s ease, box-shadow .18s ease}
     .card:hover{transform:translateY(-4px);box-shadow:0 30px 60px rgba(0,0,0,.4)}
     .card .box{padding:20px}
 
-    /* NUEVA SECCION DE SKILLS COMO TARJETAS */
     #conocimientos .skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
     .skill-card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-align:center;box-shadow:var(--shadow);transition:.2s}
     .skill-card:hover{transform:translateY(-4px);box-shadow:0 30px 60px rgba(0,0,0,.4)}
@@ -130,8 +130,9 @@
         <p class="lead">Soy estudiante de la Tecnicatura Universitaria en Programacion (UTN). Me apasiona el desarrollo en C++ y web, con un enfoque especial en la creacion de videojuegos. Disfruto transformar ideas en proyectos concretos, buscando siempre que el codigo sea claro, simple y entretenido de usar.</p>
         <div class="tags">
           <span class="tag">C++</span>
+          <span class="tag">C#</span>
           <span class="tag">Videojuegos</span>
-          <span class="tag">HTML/CSS/JS</span>
+          <span class="tag">HTML</span>
           <span class="tag">SQL</span>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:10px">
@@ -144,7 +145,7 @@
       </div>
     </div>
   </section>
-
+  
   <!-- INFO -->
   <section id="info">
     <div class="wrap">
@@ -160,8 +161,8 @@
           <p>Seguir aprendiendo y tener mi primera experiencia profesional en programacion, especialmente en el ambito de videojuegos.</p>
         </div></article>
         <article class="card panel"><div class="box">
-          <h3>Stack</h3>
-          <p>C++, STL, SFML, HTML, CSS, JS, Git, SQL.</p>
+          <h3>Stack<\/h3>
+          <p>C++, C#, SFML, HTML, Git, SQL.<\/p>
         </div></article>
       </div>
     </div>
@@ -193,8 +194,8 @@
           <p>Uso cotidiano para control de versiones y trabajo colaborativo en GitHub.</p>
         </div>
         <div class="skill-card">
-          <h3>🌐 HTML/CSS/JS</h3>
-          <p>Capacidad para maquetado web y proyectos frontend basicos.</p>
+          <h3>⚙️ C#</h3>
+          <p>Buenas bases de C# orientado a desarrollo de juegos y herramientas.</p>
         </div>
       </div>
     </div>
@@ -246,14 +247,29 @@
       </div>
     </div>
   </section>
-
+  
   <!-- CONTACTO -->
   <section id="contacto">
     <div class="wrap">
       <div class="section-title"><span class="pill"></span><h2>Contacto</h2></div>
       <p>Escribime:</p>
       <div class="panel" style="padding:20px">
-        <form id="form-contacto" action="https://formspree.io/f/tu-endpoint" method="POST">
+        <form action="https://formspree.io/f/mzzbepvp" method="POST">
           <input type="text" name="nombre" placeholder="Tu nombre" required />
           <input type="email" name="email" placeholder="Tu email" required />
           <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
+          <button class="btn" type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    Hecho por Bernardo Fiaschi · © <span id="year"></span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
