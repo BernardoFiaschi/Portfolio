@@ -250,28 +250,50 @@
     </div>
   </section>
   
-  <!-- CONTACTO -->
-  <section id="contacto">
-    <div class="wrap">
-      <div class="section-title"><span class="pill"></span><h2>Contacto</h2></div>
-      <p>Escribime:</p>
-      <div class="panel" style="padding:20px">
-        <form action="https://formspree.io/f/mzzbepvp" method="POST">
-          <input type="text" name="nombre" placeholder="Tu nombre" required />
-          <input type="email" name="email" placeholder="Tu email" required />
-          <textarea name="mensaje" placeholder="Tu mensaje" required></textarea>
-          <button class="btn" type="submit">Enviar</button>
-        </form>
-      </div>
-    </div>
-  </section>
 
-  <footer>
-    Hecho por Bernardo Fiaschi · © <span id="year"></span>
-  </footer>
 
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<!-- CONTACTO -->
+<section id="contacto">
+<div class="wrap">
+<div class="section-title"><span class="pill"></span><h2>Contacto</h2></div>
+<p>Escribime:</p>
+<div class="panel" style="padding:20px">
+<form id="form-contacto">
+<input type="text" id="f-nombre" name="nombre" placeholder="Tu nombre" required />
+<input type="email" id="f-email" name="email" placeholder="Tu email" required />
+<textarea id="f-mensaje" name="mensaje" placeholder="Tu mensaje" required></textarea>
+<button class="btn" id="btn-mailto" type="button">Enviar</button>
+<p style="font-size:13px;color:#9ca3af;margin-top:8px">Se abrira tu cliente de correo para enviarme el mensaje.</p>
+</form>
+</div>
+</div>
+</section>
+
+
+<footer>
+Hecho a mano por Bernardo Fiaschi · © <span id="year"></span>
+</footer>
+
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+
+
+const btn = document.getElementById('btn-mailto');
+if(btn){
+btn.addEventListener('click', ()=>{
+const nombre = document.getElementById('f-nombre').value.trim();
+const email = document.getElementById('f-email').value.trim();
+const msg = document.getElementById('f-mensaje').value.trim();
+if(!nombre || !email || !msg){
+alert('Completá nombre, email y mensaje.');
+return;
+}
+const subject = encodeURIComponent(`Contacto desde portfolio – ${nombre}`);
+const body = encodeURIComponent(`Nombre: ${nombre}\nEmail: ${email}\n\n${msg}`);
+window.location.href = `mailto:bernardo.fiaschi@gmail.com?subject=${subject}&body=${body}`;
+});
+}
+</script>
 </body>
 </html>
