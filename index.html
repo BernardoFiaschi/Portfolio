@@ -159,7 +159,27 @@
       #info p, .card p, .card h3{ text-align:center; }
       .photo img{ max-width:82%; }
     }
-    
+
+    @media (max-width: 600px)
+    {
+      html, body{
+        background: #0d1117 !important;
+        background-image: none !important;
+      }
+      :root{ --card: none; }
+      .panel{
+        background: rgba(255,255,255,.03) !important;
+        border-color: rgba(255,255,255,.07) !important;
+      }
+      .section-title{ display:flex; align-items:center; gap:10px; }
+      .section-title h2{ margin:0; line-height:1.1; }
+      .section-title .pill{
+        width:10px; height:10px;
+        box-shadow: none;
+        transform: translateY(2px);
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -266,7 +286,7 @@
           <img src="trucazo.jpg" alt="Proyecto Trucazo" />
           <div class="box">
             <h3>Trucazo</h3>
-            <p>Juego estilo Roguelike basado en el truco donde se hacen jugadas para sumar puntos y pasar de rondas.</p>
+            <p>Juego del genero Roguelike basado en el truco. Se hacen jugadas tratando de combinar cartas con el mismo numero o palo para sumar puntos y conseguir el puntaje requerido en cada ronda que va escalando hasta la ultima.</p>
             <div class="links">
               <a class="btn" href="https://github.com/BernardoFiaschi/TRUCAZO" target="_blank">Ver repo</a>
               <span class="chip">C++</span>
