@@ -180,6 +180,24 @@
         transform: translateY(2px);
       }
     }
+    
+    @media (min-width: 981px){
+      .section-title{
+        display:flex;   
+        align-items:center;
+        gap:12px;
+      }
+      .section-title h2{
+        margin:0;        
+        line-height:1;  
+      }
+      .section-title .pill{
+        width:12px;
+        height:12px;
+        flex:0 0 auto;
+        transform:translateY(1px);
+      }
+    }
 
   </style>
 </head>
@@ -299,7 +317,7 @@
           <img src="greed.jpg" alt="Proyecto Greed" />
           <div class="box">
             <h3>Greed TP Integrador</h3>
-            <p>Juego de dados en donde se deben acumular puntos y elegir sabiamente cuando detenerse para no perderlos. Se puede jugar solo contra la CPU o de a dos jugadores o mas.</p>
+            <p>Juego de dados en donde se deben acumular puntos en base a los resultados obtenidos de los dados y elegir sabiamente cuando detenerse para no perderlos. Se puede jugar solo contra la CPU o de a dos jugadores o mas.</p>
             <div class="links">
               <a class="btn" href="https://github.com/manuimfeld/TP_INTEGRADOR" target="_blank">Ver repo</a>
               <span class="chip">C++</span>
